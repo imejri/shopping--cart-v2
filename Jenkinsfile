@@ -20,6 +20,14 @@ pipeline {
                     }
 
                 }
+                stage('Build'){
+                    steps {
+                        scripts {
+                          sh './mvnw package -D skipTests'
+                        }
+                    }    
+                    
+                }
             }
         }
     }
