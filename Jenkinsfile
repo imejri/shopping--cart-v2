@@ -22,7 +22,7 @@ pipeline {
                 }
                 stage('Build'){
                     steps {
-                        scripts {
+                        script {
                           sh './mvnw package -D skipTests'
                         }
                     }    
